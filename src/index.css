@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-snap-type: y;
+}
+
+@layer base {
+    html {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+  }
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border-radius: 10px;
+}
+.glass-sm {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border-radius: 10px;
+}
+
+.color-effect {
+    background: linear-gradient(120deg,  #35978f,#b4e4e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+ul {
+    list-style: none; /* Remove default bullets */
+  }
+  
+  ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #35978f; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+  }
